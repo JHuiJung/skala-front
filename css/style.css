@@ -26,6 +26,13 @@ body {
     padding: 0;
 }
 
+/* ===== 헤더 배경 이미지 블록 (일반 흐름 요소 - 본문은 이 블록 다음에 자연스럽게 이어짐) ===== */
+.header-bg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 /* ===== 제목 강조 ===== */
 h1 {
     font-size: 2.2rem;
@@ -52,10 +59,9 @@ a:hover {
 }
 
 /* ===== 컨테이너 (가운데 정렬) ===== */
+/* 배경 이미지(z-index:-10)가 비쳐 보이도록 배경색을 두지 않음 */
 .container {
     margin: 0 auto;
-    padding: 20px 30px;
-    background-color: var(--color-bg);
 }
 
 /* ===== myTrip.html 여행지 카드 ===== */
@@ -115,11 +121,6 @@ nav.nav-hidden {
     transform: translateY(-100%);
     opacity: 0;
     pointer-events: none;
-}
-
-/* nav가 fixed로 빠지는 만큼 header를 아래로 밀어줌 */
-header {
-    margin-top: 64px;
 }
 
 .logo {
@@ -327,10 +328,6 @@ aside button:hover {
         align-items: flex-start;
         height: auto;
         padding: 10px 20px;
-    }
-
-    header {
-        margin-top: 180px;
     }
 
     .nav-right {
