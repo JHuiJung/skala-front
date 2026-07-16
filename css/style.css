@@ -1,0 +1,72 @@
+/* ===== 전체 폰트 / 줄간격 / 색상 ===== */
+body {
+    font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.8;
+    color: #333333;
+    background-color: #f2f4f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== 제목 강조 ===== */
+h1 {
+    font-size: 2.2rem;
+    color: #2d3f6e;
+    padding: 12px 0;
+    border-bottom: 4px solid #4a6fdc;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #2d3f6e;
+    padding: 8px 0 8px 10px;
+    border-left: 6px solid #4a6fdc;
+}
+
+/* ===== 링크 스타일 ===== */
+a {
+    color: #4a6fdc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== 컨테이너 (가운데 정렬) ===== */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px 30px;
+    background-color: #ffffff;
+}
+
+/* ===== myTrip.html 여행지 카드 ===== */
+.trip-card {
+    background-color: #fafbff;
+    border: 1px solid #dfe4f2;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+/* ===== myClass.html 시간표 ===== */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #cfd6e8;
+    padding: 8px 10px;
+    text-align: center;
+}
+
+thead th {
+    background-color: #4a6fdc;
+    color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f4fc;
+}
