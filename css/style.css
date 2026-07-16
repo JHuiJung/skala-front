@@ -149,6 +149,23 @@ input[type="reset"]:hover {
     background-color: #c7cde3;
 }
 
+/* ===== 미션6~8: 미니 게임/도구 버튼 ===== */
+aside button {
+    display: block;
+    margin: 8px 0;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4a6fdc;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+aside button:hover {
+    background-color: #2d3f6e;
+}
+
 /* ===== 미션5: 여행 카드 hover 효과 ===== */
 .trip-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
