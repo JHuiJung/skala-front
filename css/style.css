@@ -35,7 +35,6 @@ a:hover {
 
 /* ===== 컨테이너 (가운데 정렬) ===== */
 .container {
-    max-width: 960px;
     margin: 0 auto;
     padding: 20px 30px;
     background-color: #ffffff;
