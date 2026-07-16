@@ -55,7 +55,7 @@ a:hover {
 .container {
     margin: 0 auto;
     padding: 20px 30px;
-    background-color: var(--font-bright);
+    background-color: var(--color-bg);
 }
 
 /* ===== myTrip.html 여행지 카드 ===== */
@@ -154,11 +154,11 @@ header {
     display: block;
     width: 24px;
     height: 24px;
-    transition: opacity 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .social-icons a:hover img {
-    opacity: 0.7;
+    transform: scale(1.15) translateY(-4px);
 }
 
 .quicklinks {
@@ -223,13 +223,11 @@ nav a {
     padding: 6px 10px;
     border-radius: 4px;
     font-size: 1.15rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
-nav a:hover {
-    background-color: var(--origin-green);
-    color: var(--font-bright);
-    text-decoration: none;
+.quicklinks a:hover {
+    transform: scale(1.1) translateY(-4px);
 }
 
 nav a.active {
