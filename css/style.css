@@ -71,13 +71,38 @@ tbody tr:nth-child(even) {
 }
 
 /* ===== 미션3: index.html 바로가기 Flexbox ===== */
+/* ===== 스크롤 시 사라짐/sticky 네비바 ===== */
 nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 12px;
-    padding: 14px 0;
+    padding: 0 30px;
+    background-color: transparent;
+    z-index: 1000;
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+
+nav.nav-scrolled {
+    background-color: lightgreen;
+}
+
+nav.nav-hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* nav가 fixed로 빠지는 만큼 header를 아래로 밀어줌 */
+header {
+    margin-top: 64px;
 }
 
 .logo {
@@ -237,6 +262,12 @@ aside button:hover {
     nav {
         flex-direction: column;
         align-items: flex-start;
+        height: auto;
+        padding: 10px 20px;
+    }
+
+    header {
+        margin-top: 140px;
     }
 
     .quicklinks {
