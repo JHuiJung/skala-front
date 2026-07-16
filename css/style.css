@@ -29,15 +29,56 @@ body {
 /* ===== 헤더 배경 이미지 블록 (일반 흐름 요소 - 본문은 이 블록 다음에 자연스럽게 이어짐) ===== */
 .header-bg {
     display: block;
+    position : relative;
+    top : -30px;
     width: 100%;
-    height: auto;
+    height: 600px;
+}
+
+
+
+/* ===== header-bg와 본문 사이 경계를 가리는 구분선 타일 (가로로 반복) ===== */
+.header-divider {
+    position: relative;
+    width: 100%;
+    height: 73px;
+    background-image: url("../media/Imgs/divider-tile.png");
+    background-repeat: repeat-x;
+    background-position: left top;
+}
+
+/* ===== 본문 끝에 divider-tile.png를 180도 뒤집어서 붙임 ===== */
+.footer-divider {
+    display: block;
+    width: 100%;
+    height: 73px;
+    transform: rotate(180deg);
+    background-image: url("../media/Imgs/divider-tile.png");
+    background-repeat: repeat-x;
+    background-position: left top;
+}
+
+/* ===== 자투리 부분: 원래 aside에 있던 내용, 임시로 가로 배치 ===== */
+.extra-row {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.extra-row > section {
+    flex: 1;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 30px;
+    height: 100px;
 }
 
 /* ===== 제목 강조 ===== */
 h1 {
     font-size: 2.2rem;
     color: var(--origin-deepgreen);
-    padding: 12px 0;
     border-bottom: 4px solid var(--origin-green);
 }
 
@@ -61,7 +102,7 @@ a:hover {
 /* ===== 컨테이너 (가운데 정렬) ===== */
 /* 배경 이미지(z-index:-10)가 비쳐 보이도록 배경색을 두지 않음 */
 .container {
-    margin: 0 auto;
+    margin: 0 0 0 0;
 }
 
 /* ===== myTrip.html 여행지 카드 ===== */
@@ -193,10 +234,21 @@ nav.nav-hidden {
 }
 
 /* ===== 미션3: index.html main/aside 가로 배치 ===== */
+
 .layout {
     display: flex;
     gap: 30px;
     align-items: flex-start;
+}
+
+main {
+  background-color: #ffffff;
+  padding: 20px 20px 20px 20px;
+}
+
+Header {
+  background-color: #ffffff;
+  padding: 20px 20px 20px 20px;
 }
 
 .layout main {

@@ -33,13 +33,13 @@
     </nav>
 
     <img src="../media/Imgs/header-bg.png" alt="배경 산 이미지" class="header-bg">
+    <div class="header-divider"></div>
 
     <header>
         <h1 class="fade-in">나의 포털</h1>
         <p>일상, 배움, 여행을 한곳에 모아둔 개인 기록 공간입니다.</p>
     </header>
 
-    <div class="layout">
     <main>
         <h2>오늘의 주요 소식</h2>
 
@@ -58,32 +58,35 @@
         </section>
     </main>
 
-    <aside>
+    <div class="footer-divider"></div>
+
+    <section class="extra-section">
         <h2>사이드 정보</h2>
         <p>현재 위치: 대한민국 📍</p>
 
-        <section>
-            <h3>실시간 세계 날씨</h3>
-            <label for="city-select">도시 선택</label>
-            <select id="city-select">
-                <option value="seoul">서울</option>
-                <option value="busan">부산</option>
-                <option value="jeju">제주</option>
-                <option value="gangneung">강릉</option>
-                <option value="tokyo">도쿄</option>
-            </select>
-            <div id="weather-box"></div>
-        </section>
+        <div class="extra-row">
+            <section>
+                <h3>실시간 세계 날씨</h3>
+                <label for="city-select">도시 선택</label>
+                <select id="city-select">
+                    <option value="seoul">서울</option>
+                    <option value="busan">부산</option>
+                    <option value="jeju">제주</option>
+                    <option value="gangneung">강릉</option>
+                    <option value="tokyo">도쿄</option>
+                </select>
+                <div id="weather-box"></div>
+            </section>
 
-        <section>
-            <h3>미니 게임 &amp; 도구</h3>
-            <p>버튼을 눌러 실행해보세요.</p>
-            <button type="button" onclick="startUpDownGame()">🎯 숫자 맞추기 게임</button>
-            <button type="button" onclick="calculateGrade()">📊 성적 계산기</button>
-            <button type="button" onclick="showMyBag()">🎒 내 가방 보기</button>
-        </section>
-    </aside>
-    </div>
+            <section>
+                <h3>미니 게임 &amp; 도구</h3>
+                <p>버튼을 눌러 실행해보세요.</p>
+                <button type="button" onclick="startUpDownGame()">🎯 숫자 맞추기 게임</button>
+                <button type="button" onclick="calculateGrade()">📊 성적 계산기</button>
+                <button type="button" onclick="showMyBag()">🎒 내 가방 보기</button>
+            </section>
+        </div>
+    </section>
 
     <footer>
         <p>문의: wjdgmlwnd12@gmail.com | 참고 사이트: <a href="https://www.w3schools.com" target="_blank">W3Schools</a></p>
