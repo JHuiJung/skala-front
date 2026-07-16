@@ -70,3 +70,54 @@ thead th {
 tbody tr:nth-child(even) {
     background-color: #f2f4fc;
 }
+
+/* ===== 미션3: index.html 바로가기 Flexbox ===== */
+.quicklinks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ===== 미션3: index.html main/aside 가로 배치 ===== */
+.layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.layout main {
+    flex: 3;
+}
+
+.layout aside {
+    flex: 1;
+}
+
+/* ===== 미션3: myTrip.html 여행지 카드 Grid 3열 ===== */
+.trip-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.trip-grid .trip-card {
+    margin: 0;
+}
+
+/* ===== 미션4: 786px 이하 반응형 ===== */
+@media (max-width: 786px) {
+    .quicklinks {
+        flex-direction: column;
+    }
+
+    .layout {
+        flex-direction: column;
+    }
+
+    .trip-grid {
+        grid-template-columns: 1fr;
+    }
+}
