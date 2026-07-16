@@ -71,9 +71,30 @@ tbody tr:nth-child(even) {
 }
 
 /* ===== 미션3: index.html 바로가기 Flexbox ===== */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 14px 0;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #2d3f6e;
+    text-decoration: none;
+}
+
+.logo:hover {
+    text-decoration: none;
+}
+
 .quicklinks {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-end;
     gap: 10px 16px;
     list-style: none;
     padding: 0;
@@ -111,6 +132,7 @@ nav a {
     display: inline-block;
     padding: 6px 10px;
     border-radius: 4px;
+    font-size: 1.15rem;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -118,6 +140,12 @@ nav a:hover {
     background-color: #4a6fdc;
     color: #ffffff;
     text-decoration: none;
+}
+
+nav a.active {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-weight: bold;
 }
 
 /* ===== 미션5: 회원가입 버튼 hover 전환 ===== */
@@ -206,8 +234,14 @@ aside button:hover {
 
 /* ===== 미션4: 786px 이하 반응형 ===== */
 @media (max-width: 786px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     .quicklinks {
         flex-direction: column;
+        justify-content: flex-start;
     }
 
     .layout {
