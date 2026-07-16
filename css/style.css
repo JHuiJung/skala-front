@@ -107,6 +107,74 @@ tbody tr:nth-child(even) {
     margin: 0;
 }
 
+/* ===== 미션5: 내비게이션 링크 hover 전환 ===== */
+nav a {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #4a6fdc;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* ===== 미션5: 회원가입 버튼 hover 전환 ===== */
+input[type="submit"],
+input[type="reset"] {
+    padding: 8px 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"] {
+    background-color: #4a6fdc;
+    color: #ffffff;
+}
+
+input[type="submit"]:hover {
+    background-color: #2d3f6e;
+}
+
+input[type="reset"] {
+    background-color: #e0e4f0;
+    color: #333333;
+}
+
+input[type="reset"]:hover {
+    background-color: #c7cde3;
+}
+
+/* ===== 미션5: 여행 카드 hover 효과 ===== */
+.trip-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trip-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(45, 63, 110, 0.25);
+}
+
+/* ===== 미션5: 헤더 타이틀 페이드인 ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1.2s ease;
+}
+
 /* ===== 미션4: 786px 이하 반응형 ===== */
 @media (max-width: 786px) {
     .quicklinks {
