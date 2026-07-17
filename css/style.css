@@ -25,6 +25,7 @@ body {
     background-color: var(--color-bg);
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 body.dark-mode {
@@ -168,6 +169,119 @@ body.dark-mode .extra-section h2 {
 
 .extra-row > section {
     flex: 1;
+}
+
+/* ===== signUp.html: fieldset/legend 태그 스타일 ===== */
+fieldset {
+    border: 2px solid var(--origin-green);
+    border-radius: 15px;
+    padding: 16px 46px;
+    max-width: 500px;
+    margin: 0 auto 16px auto;
+    box-sizing: border-box;
+}
+
+legend {
+    border: 2px solid var(--origin-green);
+    border-radius: 15px;
+    padding: 4px 12px;
+    color: var(--origin-green);
+    font-size: 1.5rem;
+}
+
+label {
+    color: var(--origin-green);
+    font-size: 1.17rem;
+}
+
+/* ===== signUp.html: 질문+입력을 한 세트로 묶는 구조 ===== */
+.form-field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.form-field input[type="text"],
+.form-field input[type="password"],
+.form-field input[type="date"],
+.form-field textarea {
+    width: 100%;
+    max-width: 375px;
+    box-sizing: border-box;
+}
+
+.radio-group {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.email-input-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ===== signUp.html: 텍스트 계열 입력 필드 스타일 ===== */
+input[type="text"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+    background-color: transparent;
+    border: 2px solid var(--origin-green);
+    border-radius: 15px;
+    padding: 6px 12px;
+    font: inherit;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--origin-deepgreen);
+    color: var(--origin-deepgreen);
+    outline: none;
+}
+
+.email-input-group span {
+    font: inherit;
+}
+
+.email-input-group select {
+    min-width: 160px;
+    text-align: center;
+}
+
+/* select는 body의 line-height:1.8을 그대로 받으면 닫힌 상태 텍스트가 아래로 치우쳐 보여서 별도 지정 */
+select {
+    line-height: normal;
+    padding: 10px;
+}
+
+/* ===== signUp.html: 라디오 버튼 커스텀 스타일 ===== */
+input[type="radio"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    margin-right: 4px;
+    border: 2px solid var(--origin-green);
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    vertical-align: middle;
+}
+
+input[type="radio"]:checked::before {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    border-radius: 50%;
+    background-color: var(--origin-deepgreen);
 }
 
 footer {
@@ -475,34 +589,6 @@ nav a.active {
     font-weight: bold;
 }
 
-/* ===== 미션5: 회원가입 버튼 hover 전환 ===== */
-input[type="submit"],
-input[type="reset"] {
-    padding: 8px 18px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-input[type="submit"] {
-    background-color: var(--origin-green);
-    color: var(--font-bright);
-}
-
-input[type="submit"]:hover {
-    background-color: var(--origin-deepgreen);
-}
-
-input[type="reset"] {
-    background-color: var(--color-neutral);
-    color: var(--font-dark);
-}
-
-input[type="reset"]:hover {
-    background-color: var(--color-neutral-hover);
-}
-
 /* ===== 미션6~8: 미니 게임/도구 버튼 ===== */
 button {
     position: relative;
@@ -519,6 +605,22 @@ button {
     
     /* [수정] 부모 버튼은 위치와 크기, 색상만 부드럽게 변경 */
     transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* ===== signUp.html: 가입하기/초기화 버튼을 가운데 인라인으로, 크기 확대 ===== */
+form button {
+    display: inline-block;
+    margin: 8px 10px;
+    padding: 14px 32px;
+    font-size: 1.2rem;
+}
+
+button[type="reset"] {
+    background-color: var(--color-neutral-hover);
+}
+
+button[type="reset"]:hover {
+    background-color: var(--color-neutral);
 }
 
 /* 배경 이미지 전용 가상 요소 추가 */

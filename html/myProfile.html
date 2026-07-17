@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+    <div id="leaf-container" class="leaf-container"></div>
+
     <div class="container">
     <nav>
-        <a href="index.html" class="logo">나의 포털</a>
+        <a href="index.html" class="logo"><img src="../media/Imgs/Logo.png" alt="나의 포털 로고"></a>
         <div class="nav-right">
-        <!-- TODO: 아래 3개 아이콘 링크는 임시로 google.com으로 연결됨. 실제 SNS 주소로 교체할 것 -->
+        <!-- TODO: 아래 3개 아이콘 링크는 임시로 google.com으로 연결됨. 실제 SNS 주소로 교체할 것 --->
         <ul class="quicklinks">
             <li><a href="index.html">Home</a></li>
             <li><a href="myClass.html">나의 시간표</a></li>
@@ -24,62 +26,116 @@
             <li><a href="signUp.html">회원가입</a></li>
         </ul>
         <ul class="social-icons">
-            <li><a href="https://google.com" target="_blank" rel="noopener" aria-label="Instagram"><img src="../media/Icons/Icon_Insta.png" alt="Instagram" width="24" height="24"></a></li>
-            <li><a href="https://google.com" target="_blank" rel="noopener" aria-label="Blog"><img src="../media/Icons/Icon_Blog.png" alt="Blog" width="24" height="24"></a></li>
-            <li><a href="https://google.com" target="_blank" rel="noopener" aria-label="YouTube"><img src="../media/Icons/Icon_Youtube.png" alt="YouTube" width="24" height="24"></a></li>
-            <li><a href="https://google.com" target="_blank" rel="noopener" aria-label="GitHub"><img src="../media/Icons/Icon_Github.png" alt="GitHub" width="24" height="24"></a></li>
+            <li><a href="https://github.com/JHuiJung" target="_blank" rel="noopener" aria-label="GitHub"><img src="../media/Icons/Icon_Github_Dark.png" alt="GitHub" width="24" height="24"></a></li>
+            <li><a href="https://www.youtube.com/@jhj_baobab" target="_blank" rel="noopener" aria-label="YouTube"><img src="../media/Icons/Icon_Youtube_Dark.png" alt="YouTube" width="24" height="24"></a></li>
+            <li><a href="https://jhjbaobab.tistory.com/#google_vignette" target="_blank" rel="noopener" aria-label="Blog"><img src="../media/Icons/Icon_Blog_Dark.png" alt="Blog" width="24" height="24"></a></li>
+            <li><a href="https://www.instagram.com/jhj_baobab/" target="_blank" rel="noopener" aria-label="Instagram"><img src="../media/Icons/Icon_Insta_Dark.png" alt="Instagram" width="24" height="24"></a></li>
         </ul>
+        <button type="button" id="dark-mode-toggle">🌙 다크모드</button>
     </div>
     </nav>
 
-    <img src="../media/Imgs/header-bg.png" alt="배경 산 이미지" class="header-bg">
+    <button type="button" id="menu-toggle" class="menu-toggle">
+        <img src="../media/Icons/Icon_Menu.png" alt="메뉴 열기">
+    </button>
+
+    <div id="mobile-menu" class="mobile-menu">
+        <ul class="mobile-menu-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="myClass.html">나의 시간표</a></li>
+            <li><a href="myHoliday.html">나의 휴일 일과</a></li>
+            <li><a href="myProfile.html" class="active">나의 프로필</a></li>
+            <li><a href="myTrip.html">나의 여행</a></li>
+            <li><a href="signUp.html">회원가입</a></li>
+        </ul>
+
+        <div class="mobile-menu-social-block">
+            <ul class="social-icons mobile-menu-social">
+                <li><a href="https://github.com/JHuiJung" target="_blank" rel="noopener" aria-label="GitHub"><img src="../media/Icons/Icon_Github_Light.png" alt="GitHub" width="24" height="24"></a></li>
+                <li><a href="https://www.youtube.com/@jhj_baobab" target="_blank" rel="noopener" aria-label="YouTube"><img src="../media/Icons/Icon_Youtube_Light.png" alt="YouTube" width="24" height="24"></a></li>
+                <li><a href="https://jhjbaobab.tistory.com/#google_vignette" target="_blank" rel="noopener" aria-label="Blog"><img src="../media/Icons/Icon_Blog_Light.png" alt="Blog" width="24" height="24"></a></li>
+                <li><a href="https://www.instagram.com/jhj_baobab/" target="_blank" rel="noopener" aria-label="Instagram"><img src="../media/Icons/Icon_Insta_Light.png" alt="Instagram" width="24" height="24"></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="monster-wrap">
+        <img src="../media/Imgs/Main_Monster_Body.png" alt="메인 몬스터 캐릭터" class="main-monster">
+        <img src="../media/Imgs/Main_Monster_Eye.png" alt="몬스터 눈" class="monster-eye-Right">
+        <img src="../media/Imgs/Main_Monster_Eye.png" alt="몬스터 눈" class="monster-eye-Left">
+    </div>
+
+    <div class="header-bg-frame">
+        <img src="../media/Imgs/header-bg-Light.png" alt="배경 산 이미지" class="header-bg">
+    </div>
+    <div class="content-block">
     <div class="header-divider"></div>
 
-    <header>
-        <h1>🙋 나의 프로필</h1>
-        <p>저를 좀 더 잘 알 수 있는 몇 가지 정보를 정리했습니다.</p>
-    </header>
+    <div class="main-content">
+        <header>
+            <h1 class="fade-in">🙋 나의 프로필</h1>
+            <p>저를 좀 더 잘 알 수 있는 몇 가지 정보를 정리했습니다.</p>
+        </header>
 
-    <main>
-        <section>
-            <h2>🍽️ 내가 좋아하는 음식</h2>
-            <ul>
-                <li>매콤한 떡볶이</li>
-                <li>여름엔 시원한 냉면</li>
-                <li>주말의 치킨과 맥주</li>
-                <li>든든한 김치찌개</li>
-            </ul>
-        </section>
+        <main>
+            <section>
+                <h2>🍽️ 내가 좋아하는 음식</h2>
+                <ul>
+                    <li>매콤한 떡볶이</li>
+                    <li>여름엔 시원한 냉면</li>
+                    <li>주말의 치킨과 맥주</li>
+                    <li>든든한 김치찌개</li>
+                </ul>
+            </section>
 
-        <section>
-            <h2>✅ 올해 할 일</h2>
-            <ol>
-                <li>프론트엔드 실습 과제 완성하기</li>
-                <li>자바스크립트 기초 다지기</li>
-                <li>해외여행 한 번 다녀오기</li>
-                <li>운동 습관 만들기</li>
-            </ol>
-        </section>
+            <section>
+                <h2>✅ 올해 할 일</h2>
+                <ol>
+                    <li>프론트엔드 실습 과제 완성하기</li>
+                    <li>자바스크립트 기초 다지기</li>
+                    <li>해외여행 한 번 다녀오기</li>
+                    <li>운동 습관 만들기</li>
+                </ol>
+            </section>
 
-        <section>
-            <h2>🏷️ 나를 설명하는 단어들</h2>
-            <dl>
-                <dt>꾸준함</dt>
-                <dd>한번 시작한 건 끝까지 해보려고 합니다.</dd>
-                <dt>호기심</dt>
-                <dd>새로운 기술이나 장소에 관심이 많습니다.</dd>
-                <dt>계획형</dt>
-                <dd>여행이든 공부든 미리 정리해두는 편입니다.</dd>
-            </dl>
-        </section>
-    </main>
+            <section>
+                <h2>🏷️ 나를 설명하는 단어들</h2>
+                <dl>
+                    <dt>꾸준함</dt>
+                    <dd>한번 시작한 건 끝까지 해보려고 합니다.</dd>
+                    <dt>호기심</dt>
+                    <dd>새로운 기술이나 장소에 관심이 많습니다.</dd>
+                    <dt>계획형</dt>
+                    <dd>여행이든 공부든 미리 정리해두는 편입니다.</dd>
+                </dl>
+            </section>
+        </main>
+    </div>
 
-    <img src="../media/Imgs/divider-tile.png" alt="구분선 타일 (뒤집힘)" class="footer-divider">
+    <div class="footer-divider"></div>
+    </div>
 
     <footer>
-        <p><small>&copy; 2026 나의 포털</small></p>
+        <div class="footer-text">
+            <p>📧 wjdgmlwnd12@gmail.com | 참고 사이트: <a href="https://www.w3schools.com" target="_blank">W3Schools</a></p>
+            <p>&copy; 2026 나의 포털. 모든 태그는 웹 표준 시맨틱 태그로 작성되었습니다.</p>
+        </div>
+
+        <!-- TODO: 아래 4개 아이콘 링크는 임시로 google.com으로 연결됨. 실제 SNS 주소로 교체할 것 -->
+        <ul class="social-icons footer-icons">
+            <li><a href="https://github.com/JHuiJung" target="_blank" rel="noopener" aria-label="GitHub"><img src="../media/Icons/Icon_Github_Light.png" alt="GitHub" width="24" height="24"></a></li>
+            <li><a href="https://www.youtube.com/@jhj_baobab" target="_blank" rel="noopener" aria-label="YouTube"><img src="../media/Icons/Icon_Youtube_Light.png" alt="YouTube" width="24" height="24"></a></li>
+            <li><a href="https://jhjbaobab.tistory.com/#google_vignette" target="_blank" rel="noopener" aria-label="Blog"><img src="../media/Icons/Icon_Blog_Light.png" alt="Blog" width="24" height="24"></a></li>
+            <li><a href="https://www.instagram.com/jhj_baobab/" target="_blank" rel="noopener" aria-label="Instagram"><img src="../media/Icons/Icon_Insta_Light.png" alt="Instagram" width="24" height="24"></a></li>
+        </ul>
     </footer>
     </div>
+
     <script src="../script/navScroll.js"></script>
+    <script src="../script/darkMode.js"></script>
+    <script src="../script/mobileMenu.js"></script>
+    <script src="../script/leaves.js"></script>
+    <script src="../script/headerParallax.js"></script>
+    <script src="../script/monsterEyes.js"></script>
 </body>
 </html>
