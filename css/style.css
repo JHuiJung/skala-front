@@ -53,7 +53,7 @@ body {
 
 /* ===== header-divider ~ footer-divider 블록 전체를 50px 위로 올림 ===== */
 .content-block {
-    margin-top: -50px;
+    margin-top: -75px;
 }
 
 /* ===== header-bg와 본문 사이 경계를 가리는 구분선 타일 (가로로 반복) ===== */
@@ -95,6 +95,24 @@ footer {
     font-size: 0.9rem;
     padding: 10px 100px 10px 100px;
     height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.social-icons.footer-icons {
+    margin: 0px 15px 0px 0px;
+    gap: 20px;
+}
+
+.footer-text p {
+    margin: 4px 0;
+}
+
+.footer-text a {
+    color: var(--font-bright);
+    text-decoration: underline;
 }
 
 /* ===== 제목 강조 ===== */
@@ -225,8 +243,8 @@ nav.nav-hidden {
 
 .social-icons img {
     display: block;
-    width: 24px;
-    height: 24px;
+    width: 36px;
+    height: 36px;
     transition: transform 0.3s ease;
 }
 
