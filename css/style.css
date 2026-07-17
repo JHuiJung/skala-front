@@ -599,6 +599,25 @@ button:active::before {
     animation: fadeIn 1.2s ease;
 }
 
+/* ===== 떨어지는 나뭇잎 효과 ===== */
+.leaf-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -8;
+    pointer-events: none;
+}
+
+.leaf {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    will-change: transform;
+}
+
 /* ===== 모바일 메뉴 (햄버거 버튼 + 우측 슬라이드 전체화면 패널) ===== */
 .menu-toggle {
     display: none;
