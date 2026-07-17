@@ -213,6 +213,17 @@ a:hover {
     top: 200px;
     transform: translateX(-50%);
     width: 400px;
+    animation: monsterIdle 1.5s ease-in-out infinite;
+}
+
+/* 몬스터 idle(숨쉬기) 애니메이션: 상하로 살짝 눌리고 좌우로 살짝 퍼졌다가 원상태로 복귀 */
+@keyframes monsterIdle {
+    0%, 100% {
+        transform: translateX(-50%) scale(1, 1);
+    }
+    50% {
+        transform: translateX(-50%) scale(1.02, 0.98);
+    }
 }
 
 .main-monster {
@@ -224,20 +235,21 @@ a:hover {
 .monster-eye-Right {
     position: absolute;
     z-index: -7;
-    left: 52%;
+    left: 55%;
     top: 48%;
     width: 16%;
     transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out;
 }
 
 .monster-eye-Left {
     position: absolute;
     z-index: -7;
-    left: 30%;
+    left: 32.5%;
     top: 48%;
     width: 16%;
     transform: translate(-50%, -50%);
-    
+    transition: transform 0.1s ease-out;
 }
 
 /* ===== myTrip.html 여행지 카드 ===== */
