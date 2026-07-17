@@ -7,6 +7,7 @@
 
     /* 아직 확정 안 된 보조색 (임시) */
     --color-bg: #4d2e01;
+    --color-bg-dark: #2a1900;
     --color-bg-soft: #f2f4fc;
     --color-border: #cfd6e8;
     --color-border-light: #dfe4f2;
@@ -24,6 +25,10 @@ body {
     background-color: var(--color-bg);
     margin: 0;
     padding: 0;
+}
+
+body.dark-mode {
+    background-color: var(--color-bg-dark);
 }
 
 /* 언더그라운드 패턴: 텍스트에 영향 안 주도록 별도 레이어로 분리하고,
@@ -114,6 +119,32 @@ body::before {
     background-image: url("../media/Imgs/divider-tile-Light.png");
     background-repeat: repeat-x;
     background-position: left top;
+}
+
+/* ===== 다크모드 ===== */
+body.dark-mode .header-divider,
+body.dark-mode .footer-divider {
+    background-image: url("../media/Imgs/divider-tile-Dark.png");
+}
+
+body.dark-mode .main-content {
+    background-color: #000000;
+}
+
+body.dark-mode .main-content,
+body.dark-mode .main-content * {
+    color: var(--font-bright);
+}
+
+/* h1/h2는 다크모드에서도 원래 색 유지 */
+body.dark-mode .main-content h1,
+body.dark-mode .main-content h2 {
+    color: var(--origin-deepgreen);
+}
+
+/* extra-section의 h2도 다크모드에서 원래 색 유지 */
+body.dark-mode .extra-section h2 {
+    color: var(--origin-deepgreen);
 }
 
 /* ===== 자투리 부분: 원래 aside에 있던 내용, 임시로 가로 배치 ===== */
