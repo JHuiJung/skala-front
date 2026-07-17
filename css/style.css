@@ -81,7 +81,7 @@ body::before {
     position: absolute;
     inset: 0;
     z-index: 1; /* 부모 배경색보다는 위로 올림 */
-    background-image: url("../media/Imgs/Bg_Monsters_Light.png");
+    background-image: url("../media/Imgs/Bg_Monsters.png");
     background-repeat: repeat;
     mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.30) 0%, transparent 30%, transparent 70%, rgba(0, 0, 0, 0.3) 100%);
     -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.30) 0%, transparent 30%, transparent 70%, rgba(0, 0, 0, 0.3) 100%);
@@ -100,7 +100,7 @@ body::before {
     position: relative;
     width: 100%;
     height: 73px;
-    background-image: url("../media/Imgs/divider-tile.png");
+    background-image: url("../media/Imgs/divider-tile-Light.png");
     background-repeat: repeat-x;
     background-position: left top;
 }
@@ -111,7 +111,7 @@ body::before {
     width: 100%;
     height: 73px;
     transform: scaleY(-1);
-    background-image: url("../media/Imgs/divider-tile.png");
+    background-image: url("../media/Imgs/divider-tile-Light.png");
     background-repeat: repeat-x;
     background-position: left top;
 }
