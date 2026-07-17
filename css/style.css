@@ -32,7 +32,7 @@ body::before {
     content: "";
     position: fixed;
     inset: 0;
-    z-index: -1;
+    z-index: -20;
     background-image: url("../media/Imgs/Bg_UnderGround.png");
     background-repeat: repeat;
     mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, transparent 30%, transparent 70%, rgba(0, 0, 0, 0.1) 100%);
@@ -42,6 +42,7 @@ body::before {
 /* ===== 헤더 배경 이미지 블록 (일반 흐름 요소 - 본문은 이 블록 다음에 자연스럽게 이어짐) ===== */
 .header-bg-frame {
     position: relative;
+    z-index: -10;
     top: -30px;
     width: 100%;
     height: 600px;
@@ -200,7 +201,43 @@ a:hover {
 /* ===== 컨테이너 (가운데 정렬) ===== */
 /* 배경 이미지(z-index:-10)가 비쳐 보이도록 배경색을 두지 않음 */
 .container {
+    position: relative;
     margin: 0 0 0 0;
+}
+
+/* Main_Monster_Body.png: 페이지 기준 가로 중앙(width/2), top 200px 위치에 배치 */
+.monster-wrap {
+    position: absolute;
+    z-index: -5;
+    left: 50%;
+    top: 200px;
+    transform: translateX(-50%);
+    width: 400px;
+}
+
+.main-monster {
+    display: block;
+    width: 100%;
+}
+
+/* Eye는 Body(.monster-wrap) 기준 %로 위치를 잡아서, Body 크기가 바뀌어도 같은 자리를 유지함 */
+.monster-eye-Right {
+    position: absolute;
+    z-index: -7;
+    left: 52%;
+    top: 48%;
+    width: 16%;
+    transform: translate(-50%, -50%);
+}
+
+.monster-eye-Left {
+    position: absolute;
+    z-index: -7;
+    left: 30%;
+    top: 48%;
+    width: 16%;
+    transform: translate(-50%, -50%);
+    
 }
 
 /* ===== myTrip.html 여행지 카드 ===== */
