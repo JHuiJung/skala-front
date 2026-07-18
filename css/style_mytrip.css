@@ -1,10 +1,62 @@
-/* ===== myTrip.html 여행지 카드 ===== */
+/* ===== myTrip.html 여행지 카드 (사진 영역 + 텍스트 영역) ===== */
 .trip-card {
-    background-color: var(--color-card-bg);
+    background-color: transparent;
     border: 1px solid var(--color-border-light);
     border-radius: 8px;
-    padding: 15px;
+    overflow: hidden;
     margin: 15px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trip-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px var(--color-shadow);
+}
+
+/* 세로 사진이 섞여 있어도 카드 높이가 맞도록 비율을 고정하고 잘라서 채움 */
+.trip-photo {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+}
+
+.trip-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 사진과 지역이름 사이 origin-green 구분선 */
+.trip-info {
+    position: relative;
+    border-top: 3px solid var(--origin-green);
+    padding: 12px;
+    text-align: center;
+}
+
+/* Bg_UnderGround.png를 50% 투명도로 얹음 (텍스트에 영향 안 주도록 별도 레이어) */
+.trip-info::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image: url("../media/Imgs/Bg_UnderGround.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.trip-info > * {
+    position: relative;
+    z-index: 1;
+}
+
+.trip-info h3 {
+    color: var(--origin-green);
+    margin: 0 0 8px 0;
 }
 
 /* ===== 미션3: myTrip.html 여행지 카드 Grid 3열 ===== */
@@ -18,19 +70,30 @@
     margin: 0;
 }
 
-/* ===== 미션5: 여행 카드 hover 효과 ===== */
-.trip-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.trip-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 20px var(--color-shadow);
-}
-
 /* ===== 미션4: 786px 이하 반응형 ===== */
 @media (max-width: 786px) {
     .trip-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* ===== myTrip.html: 여행 속 일상 비디오 플레이어 =====
+   세로로 촬영된 영상이라 width:100%를 주면 지나치게 길쭉해지므로,
+   높이를 기준으로 제한하고 원본 비율 그대로 가운데 정렬함 */
+.trip-video-frame {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+    border: 2px solid var(--origin-green);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.trip-video-frame video {
+    display: block;
+    max-height: 500px;
+    max-width: 100%;
+    accent-color: var(--origin-green);
 }

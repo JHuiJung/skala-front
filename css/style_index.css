@@ -1,3 +1,24 @@
+/* ===== index.html: 처음 로딩 시 한 번만 재생되는 몬스터 등장 애니메이션 (JS가 세션당 1회만 클래스 부여) =====
+   head의 동기 스크립트가 첫 페인트 전에 top:400px로 미리 옮겨둬서,
+   "200px로 보였다가 400px로 순간이동" 하는 깜빡임 없이 바로 400px에서 시작하게 함 */
+html.monster-intro-pending .monster-wrap {
+    top: 400px;
+}
+
+@keyframes monsterEntrance {
+    from {
+        top: 400px;
+    }
+    to {
+        top: 200px;
+    }
+}
+
+/* 1초 지연 동안에도 both fill-mode 덕분에 top:400px를 유지하다가, 지연이 끝나면 애니메이션 시작 */
+.monster-intro {
+    animation: monsterEntrance 1s cubic-bezier(0.34, 1.56, 0.64, 1) 1s both, monsterIdle 1.5s ease-in-out infinite;
+}
+
 /* ===== index.html: 유튜브 영상 갤러리 (좌측 버튼 - 영상 - 우측 버튼) ===== */
 .youtube-video {
     display: flex;
@@ -44,19 +65,56 @@
     border-radius: 15px;
 }
 
-/* ===== index.html: 자투리 부분 (원래 aside에 있던 내용, 임시로 가로 배치) ===== */
-.extra-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* ===== index.html: 오늘의 영화추천 포스터 카드 =====
+   좌측(포스터) / 우측상단(제목,년도) / 우측 나머지(줄거리) */
+.poster-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "image header"
+        "image story";
+    max-width: 700px;
+    margin: 0 auto;
+    border: 2px solid var(--origin-green);
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: left;
+}
+
+.poster-image {
+    grid-area: image;
+}
+
+/* 포스터의 원본 비율 그대로 두어, 폭이 넓어지면 높이도 함께 커지고 카드 전체 길이도 늘어나게 함 */
+.poster-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.poster-header {
+    grid-area: header;
+    padding: 16px 16px 4px 16px;
     text-align: center;
 }
 
-.extra-section,
-.extra-section * {
-    color: var(--font-bright);
+.poster-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
 }
 
+.poster-story {
+    grid-area: story;
+    padding: 4px 28px 16px 28px;
+}
+
+.poster-story p {
+    margin: 0;
+}
+
+/* ===== index.html: 자투리 부분(스끼다시)의 가로 배치 2분할 ===== */
 .extra-row {
     display: flex;
     gap: 60px;
@@ -75,11 +133,6 @@
 .extra-row > section button {
     display: block;
     margin: 20px auto;
-}
-
-/* extra-section의 h2도 다크모드에서 원래 색 유지 */
-body.dark-mode .extra-section h2 {
-    color: var(--origin-deepgreen);
 }
 
 /* ===== 미션9: 실시간 날씨 ===== */

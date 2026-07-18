@@ -191,6 +191,12 @@ h2 {
     border-bottom: 4px solid var(--origin-green);
 }
 
+/* ===== 문단 줄바꿈: 글자 단위가 아닌 단어(공백) 단위로 넘어가게 함 ===== */
+p {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
 /* ===== 링크 스타일 ===== */
 a {
     color: var(--origin-green);
@@ -253,6 +259,29 @@ a:hover {
     width: 16%;
     transform: translate(-50%, -50%);
     transition: transform 0.1s ease-out;
+}
+
+/* ===== 자투리 섹션 (index.html 스끼다시, myTrip.html 배경음악에서 공용): 흰 글자 강제 ===== */
+.extra-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.extra-section,
+.extra-section * {
+    color: var(--font-bright);
+}
+
+.extra-section audio {
+    display: block;
+    margin: 0 auto;
+}
+
+/* extra-section의 h2도 다크모드에서 원래 색 유지 */
+body.dark-mode .extra-section h2 {
+    color: var(--origin-deepgreen);
 }
 
 /* ===== 카드형 fieldset 공통 스타일 (signUp.html, myHoliday.html에서 공용) ===== */

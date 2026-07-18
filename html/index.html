@@ -9,6 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/style_index.css">
+    <script>
+        if (!sessionStorage.getItem("monsterIntroPlayed")) {
+            document.documentElement.classList.add("monster-intro-pending");
+        }
+    </script>
 </head>
 <body>
     <div id="leaf-container" class="leaf-container"></div>
@@ -142,15 +147,30 @@
     <div class="main-content">
         <header>
             <h1 class="fade-in">🎬 오늘의 영화추천 </h1>
-            <p>오늘의 영화는 무엇일까용?</p>
+            <p>오늘은 무엇을 볼까?</p>
         </header>
+
+        <main>
+            <div class="poster-card">
+                <div class="poster-image">
+                    <img id="poster-img" src="" alt="추천 영화 포스터">
+                </div>
+                <div class="poster-header">
+                    <h2 id="poster-title"></h2>
+                    <h3 id="poster-year"></h3>
+                </div>
+                <div class="poster-story">
+                    <p id="poster-story"></p>
+                </div>
+            </div>
+        </main>
     </div>
 
     <div class="footer-divider"></div>
 
     <section class="extra-section">
         <br>
-        <h2>스끼다시</h2>
+        <h2>Mini Contents</h2>
 
         <br>
         <br>
@@ -206,5 +226,7 @@
     <script src="../script/bag.js"></script>
     <script type="module" src="../script/realtimeInfo.js"></script>
     <script src="../script/youtubeGallery.js"></script>
+    <script src="../script/moviePoster.js"></script>
+    <script src="../script/monsterIntro.js"></script>
 </body>
 </html>
