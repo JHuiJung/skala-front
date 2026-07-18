@@ -1,13 +1,4 @@
-/* ===== signUp.html: fieldset/legend 태그 스타일 ===== */
-fieldset {
-    border: 2px solid var(--origin-green);
-    border-radius: 15px;
-    padding: 16px 46px;
-    max-width: 500px;
-    margin: 0 auto 16px auto;
-    box-sizing: border-box;
-}
-
+/* ===== signUp.html: legend 태그 스타일 (fieldset 자체는 style.css에 공통으로 있음) ===== */
 legend {
     border: 2px solid var(--origin-green);
     border-radius: 15px;

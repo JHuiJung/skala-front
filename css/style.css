@@ -255,6 +255,16 @@ a:hover {
     transition: transform 0.1s ease-out;
 }
 
+/* ===== 카드형 fieldset 공통 스타일 (signUp.html, myHoliday.html에서 공용) ===== */
+fieldset {
+    border: 2px solid var(--origin-green);
+    border-radius: 15px;
+    padding: 16px 46px;
+    max-width: 500px;
+    margin: 0 auto 16px auto;
+    box-sizing: border-box;
+}
+
 /* ===== label / select 공통 스타일 (index.html city-select, signUp.html 여러 select에서 공용) ===== */
 label {
     color: var(--origin-green);
