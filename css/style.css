@@ -265,6 +265,49 @@ fieldset {
     box-sizing: border-box;
 }
 
+/* ===== 카드 가로 정렬 + hover 확대 효과 (myHoliday.html, myProfile.html에서 공용) ===== */
+.text-card-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.text-card {
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    margin: 0;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.text-card:hover {
+    transform: translateY(-6px) scale(1.05);
+}
+
+.text-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image: url("../media/Imgs/Bg_UnderGround.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 0.5;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+}
+
+.text-card:hover::before {
+    transform: scale(1.1);
+}
+
+.text-card > * {
+    position: relative;
+    z-index: 1;
+}
+
 /* ===== label / select 공통 스타일 (index.html city-select, signUp.html 여러 select에서 공용) ===== */
 label {
     color: var(--origin-green);
@@ -635,5 +678,10 @@ button:active::before {
 @media (max-width: 786px) {
     .layout {
         flex-direction: column;
+    }
+
+    .text-card-row {
+        flex-direction: column;
+        align-items: center;
     }
 }
