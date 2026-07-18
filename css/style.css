@@ -4,6 +4,7 @@
     --origin-deepgreen: #06a96c;
     --font-dark: #111111;
     --font-bright: #ffffff;
+    --font-gray: #323232;
 
     /* 아직 확정 안 된 보조색 (임시) */
     --color-bg: #4d2e01;
@@ -146,6 +147,12 @@ body.dark-mode .main-content h2 {
 /* extra-section의 h2도 다크모드에서 원래 색 유지 */
 body.dark-mode .extra-section h2 {
     color: var(--origin-deepgreen);
+}
+
+/* 다크모드에서는 밝은 --color-bg-soft 대신 어두운 줄무늬로 바꾸고, 글자는 --font-gray로 가독성 확보 */
+body.dark-mode tbody tr:nth-child(even) td {
+    background-color: var(--font-gray);
+    color: var(--font-bright);
 }
 
 /* ===== 자투리 부분: 원래 aside에 있던 내용, 임시로 가로 배치 ===== */
@@ -670,6 +677,79 @@ button:hover::before,
 button:active::before {
     /* [호버 상태] 배경 이미지 사이즈를 500px로 확대 */
     background-size: 500px 500px;
+}
+
+/* ===== myClass.html: 달력 제목 + 이전/다음 달 버튼 ===== */
+.calendar-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin: 16px 0;
+}
+
+.calendar-btn-group {
+    display: flex;
+    gap: 20px;
+}
+
+.calendar-btn {
+    display: inline-block;
+    background: none;
+    border: none;
+    padding: 4px 10px;
+    margin: 0;
+    color: var(--origin-green);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.calendar-btn::before {
+    display: none;
+}
+
+.calendar-btn:hover,
+.calendar-btn:active {
+    background: none;
+    color: var(--origin-deepgreen);
+    transform: none;
+}
+
+.calendar-btn:disabled {
+    color: var(--color-neutral);
+    cursor: not-allowed;
+}
+
+/* ===== myClass.html: 달력 셀 (날짜는 좌측 상단, 과목명은 중앙) ===== */
+#calendar-table {
+    table-layout: fixed;
+}
+
+#calendar-table th,
+#calendar-table td {
+    width: 14.2857%;
+}
+
+#calendar-table td {
+    position: relative;
+    height: 70px;
+    padding: 20px 4px 4px 4px;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.calendar-date {
+    position: absolute;
+    top: 4px;
+    left: 6px;
+    color: var(--origin-green);
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.calendar-subject {
+    font-size: 0.8rem;
 }
 
 /* ===== 미션9: 실시간 날씨 ===== */

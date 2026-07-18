@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css?v=debug1">
 </head>
 <body>
     <div id="leaf-container" class="leaf-container"></div>
@@ -77,6 +77,12 @@
         </header>
 
         <main>
+            <section id="today-class-info">
+                <p id="today-date"></p>
+                <h2 id="today-subject"></h2>
+                <p id="today-professor"></p>
+            </section>
+
             <table border="1">
                 <thead>
                     <tr>
@@ -143,6 +149,7 @@
                         <td>질의응답</td>
                         <td>다음 주 계획</td>
                     </tr>
+
                     <tr>
                         <td>17:00-18:00</td>
                         <td>자율 학습</td>
@@ -153,6 +160,32 @@
                     </tr>
                 </tbody>
             </table>
+
+            <br>
+
+            <section id="class-calendar">
+                <div class="calendar-header">
+                    <h2 id="calendar-title"></h2>
+                    <div class="calendar-btn-group">
+                        <button type="button" id="calendar-prev" class="calendar-btn">◀</button>
+                        <button type="button" id="calendar-next" class="calendar-btn">▶</button>
+                    </div>
+                </div>
+                <table id="calendar-table" border="1">
+                    <thead>
+                        <tr>
+                            <th>일</th>
+                            <th>월</th>
+                            <th>화</th>
+                            <th>수</th>
+                            <th>목</th>
+                            <th>금</th>
+                            <th>토</th>
+                        </tr>
+                    </thead>
+                    <tbody id="calendar-body"></tbody>
+                </table>
+            </section>
         </main>
     </div>
 
@@ -181,5 +214,7 @@
     <script src="../script/leaves.js"></script>
     <script src="../script/headerParallax.js"></script>
     <script src="../script/monsterEyes.js"></script>
+    <script src="../script/classInfo.js"></script>
+    <script src="../script/classCalendar.js"></script>
 </body>
 </html>
