@@ -1,0 +1,99 @@
+/* ===== myClass.html 시간표 ===== */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid var(--color-border);
+    padding: 8px 10px;
+    text-align: center;
+}
+
+thead th {
+    background-color: var(--origin-green);
+    color: var(--font-bright);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--color-bg-soft);
+}
+
+/* 다크모드에서는 밝은 --color-bg-soft 대신 어두운 줄무늬로 바꾸고, 글자는 --font-gray로 가독성 확보 */
+body.dark-mode tbody tr:nth-child(even) td {
+    background-color: var(--font-gray);
+    color: var(--font-bright);
+}
+
+/* ===== myClass.html: 달력 제목 + 이전/다음 달 버튼 ===== */
+.calendar-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin: 16px 0;
+}
+
+.calendar-btn-group {
+    display: flex;
+    gap: 20px;
+}
+
+.calendar-btn {
+    display: inline-block;
+    background: none;
+    border: none;
+    padding: 4px 10px;
+    margin: 0;
+    color: var(--origin-green);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.calendar-btn::before {
+    display: none;
+}
+
+.calendar-btn:hover,
+.calendar-btn:active {
+    background: none;
+    color: var(--origin-deepgreen);
+    transform: none;
+}
+
+.calendar-btn:disabled {
+    color: var(--color-neutral);
+    cursor: not-allowed;
+}
+
+/* ===== myClass.html: 달력 셀 (날짜는 좌측 상단, 과목명은 중앙) ===== */
+#calendar-table {
+    table-layout: fixed;
+}
+
+#calendar-table th,
+#calendar-table td {
+    width: 14.2857%;
+}
+
+#calendar-table td {
+    position: relative;
+    height: 70px;
+    padding: 20px 4px 4px 4px;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.calendar-date {
+    position: absolute;
+    top: 4px;
+    left: 6px;
+    color: var(--origin-green);
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.calendar-subject {
+    font-size: 0.8rem;
+}

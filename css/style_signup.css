@@ -1,0 +1,115 @@
+/* ===== signUp.html: fieldset/legend 태그 스타일 ===== */
+fieldset {
+    border: 2px solid var(--origin-green);
+    border-radius: 15px;
+    padding: 16px 46px;
+    max-width: 500px;
+    margin: 0 auto 16px auto;
+    box-sizing: border-box;
+}
+
+legend {
+    border: 2px solid var(--origin-green);
+    border-radius: 15px;
+    padding: 4px 12px;
+    color: var(--origin-green);
+    font-size: 1.5rem;
+}
+
+/* ===== signUp.html: 질문+입력을 한 세트로 묶는 구조 ===== */
+.form-field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.form-field input[type="text"],
+.form-field input[type="password"],
+.form-field input[type="date"],
+.form-field textarea {
+    width: 100%;
+    max-width: 375px;
+    box-sizing: border-box;
+}
+
+.radio-group {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.email-input-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.email-input-group span {
+    font: inherit;
+}
+
+.email-input-group select {
+    min-width: 160px;
+    text-align: center;
+}
+
+/* ===== signUp.html: 텍스트 계열 입력 필드 스타일 ===== */
+input[type="text"],
+input[type="password"],
+input[type="date"],
+textarea {
+    background-color: transparent;
+    border: 2px solid var(--origin-green);
+    border-radius: 15px;
+    padding: 6px 12px;
+    font: inherit;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+    border-color: var(--origin-deepgreen);
+    color: var(--origin-deepgreen);
+    outline: none;
+}
+
+/* ===== signUp.html: 라디오 버튼 커스텀 스타일 ===== */
+input[type="radio"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    margin-right: 4px;
+    border: 2px solid var(--origin-green);
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    vertical-align: middle;
+}
+
+input[type="radio"]:checked::before {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    border-radius: 50%;
+    background-color: var(--origin-deepgreen);
+}
+
+/* ===== signUp.html: 가입하기/초기화 버튼을 가운데 인라인으로, 크기 확대 ===== */
+form button {
+    display: inline-block;
+    margin: 8px 10px;
+    padding: 14px 32px;
+    font-size: 1.2rem;
+}
+
+button[type="reset"] {
+    background-color: var(--color-neutral-hover);
+}
+
+button[type="reset"]:hover {
+    background-color: var(--color-neutral);
+}

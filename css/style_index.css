@@ -1,0 +1,56 @@
+/* ===== index.html: 자투리 부분 (원래 aside에 있던 내용, 임시로 가로 배치) ===== */
+.extra-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.extra-section,
+.extra-section * {
+    color: var(--font-bright);
+}
+
+.extra-row {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.extra-row > section {
+    flex: 1;
+    background-color: transparent;
+    border: 2px solid var(--origin-green);
+    border-radius: 15px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.extra-row > section button {
+    display: block;
+    margin: 20px auto;
+}
+
+/* extra-section의 h2도 다크모드에서 원래 색 유지 */
+body.dark-mode .extra-section h2 {
+    color: var(--origin-deepgreen);
+}
+
+/* ===== 미션9: 실시간 날씨 ===== */
+#city-select {
+    margin-top: 6px;
+    padding: 4px 8px;
+}
+
+/* .extra-section *가 글자색을 흰색으로 강제해서, 드롭다운을 펼쳤을 때 옵션 목록이
+   흰 배경 위에 흰 글씨로 안 보이는 문제를 막기 위해 옵션 색만 되돌림 */
+#city-select option {
+    color: var(--font-dark);
+}
+
+#weather-box {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: transparent;
+    color: var(--font-bright);
+}

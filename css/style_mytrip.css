@@ -1,0 +1,36 @@
+/* ===== myTrip.html 여행지 카드 ===== */
+.trip-card {
+    background-color: var(--color-card-bg);
+    border: 1px solid var(--color-border-light);
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+/* ===== 미션3: myTrip.html 여행지 카드 Grid 3열 ===== */
+.trip-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.trip-grid .trip-card {
+    margin: 0;
+}
+
+/* ===== 미션5: 여행 카드 hover 효과 ===== */
+.trip-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trip-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px var(--color-shadow);
+}
+
+/* ===== 미션4: 786px 이하 반응형 ===== */
+@media (max-width: 786px) {
+    .trip-grid {
+        grid-template-columns: 1fr;
+    }
+}

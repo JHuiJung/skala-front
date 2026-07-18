@@ -70,8 +70,6 @@ body::before {
     transition: transform 0.1s ease-out;
 }
 
-
-
 /* ===== header-divider ~ footer-divider 블록 전체를 50px 위로 올림 ===== */
 .content-block {
     margin-top: -75px;
@@ -144,163 +142,6 @@ body.dark-mode .main-content h2 {
     color: var(--origin-deepgreen);
 }
 
-/* extra-section의 h2도 다크모드에서 원래 색 유지 */
-body.dark-mode .extra-section h2 {
-    color: var(--origin-deepgreen);
-}
-
-/* 다크모드에서는 밝은 --color-bg-soft 대신 어두운 줄무늬로 바꾸고, 글자는 --font-gray로 가독성 확보 */
-body.dark-mode tbody tr:nth-child(even) td {
-    background-color: var(--font-gray);
-    color: var(--font-bright);
-}
-
-/* ===== 자투리 부분: 원래 aside에 있던 내용, 임시로 가로 배치 ===== */
-.extra-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.extra-section,
-.extra-section * {
-    color: var(--font-bright);
-}
-
-.extra-row {
-    display: flex;
-    gap: 60px;
-    flex-wrap: wrap;
-}
-
-.extra-row > section {
-    flex: 1;
-    background-color: transparent;
-    border: 2px solid var(--origin-green);
-    border-radius: 15px;
-    padding: 16px;
-    box-sizing: border-box;
-}
-
-.extra-row > section button {
-    display: block;
-    margin: 20px auto;
-}
-
-/* ===== signUp.html: fieldset/legend 태그 스타일 ===== */
-fieldset {
-    border: 2px solid var(--origin-green);
-    border-radius: 15px;
-    padding: 16px 46px;
-    max-width: 500px;
-    margin: 0 auto 16px auto;
-    box-sizing: border-box;
-}
-
-legend {
-    border: 2px solid var(--origin-green);
-    border-radius: 15px;
-    padding: 4px 12px;
-    color: var(--origin-green);
-    font-size: 1.5rem;
-}
-
-label {
-    color: var(--origin-green);
-    font-size: 1.17rem;
-}
-
-/* ===== signUp.html: 질문+입력을 한 세트로 묶는 구조 ===== */
-.form-field {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-    margin-bottom: 16px;
-}
-
-.form-field input[type="text"],
-.form-field input[type="password"],
-.form-field input[type="date"],
-.form-field textarea {
-    width: 100%;
-    max-width: 375px;
-    box-sizing: border-box;
-}
-
-.radio-group {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-}
-
-.email-input-group {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-/* ===== signUp.html: 텍스트 계열 입력 필드 스타일 ===== */
-input[type="text"],
-input[type="password"],
-input[type="date"],
-select,
-textarea {
-    background-color: transparent;
-    border: 2px solid var(--origin-green);
-    border-radius: 15px;
-    padding: 6px 12px;
-    font: inherit;
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="date"]:focus,
-select:focus,
-textarea:focus {
-    border-color: var(--origin-deepgreen);
-    color: var(--origin-deepgreen);
-    outline: none;
-}
-
-.email-input-group span {
-    font: inherit;
-}
-
-.email-input-group select {
-    min-width: 160px;
-    text-align: center;
-}
-
-/* select는 body의 line-height:1.8을 그대로 받으면 닫힌 상태 텍스트가 아래로 치우쳐 보여서 별도 지정 */
-select {
-    line-height: normal;
-    padding: 10px;
-}
-
-/* ===== signUp.html: 라디오 버튼 커스텀 스타일 ===== */
-input[type="radio"] {
-    appearance: none;
-    width: 18px;
-    height: 18px;
-    margin-right: 4px;
-    border: 2px solid var(--origin-green);
-    border-radius: 50%;
-    outline: none;
-    cursor: pointer;
-    position: relative;
-    vertical-align: middle;
-}
-
-input[type="radio"]:checked::before {
-    content: "";
-    position: absolute;
-    inset: 3px;
-    border-radius: 50%;
-    background-color: var(--origin-deepgreen);
-}
-
 footer {
     background-color: rgba(0, 0, 0, 0.5);
     color: var(--font-bright);
@@ -334,19 +175,19 @@ h1 {
     color: var(--origin-deepgreen);
     width: fit-content;
     margin: 0 auto;
-    text-align: center; 
+    text-align: center;
     border-bottom: 4px solid var(--origin-green);
 }
 
 h2 {
     font-size: 1.5rem;
     color: var(--origin-deepgreen);
-    padding: 8px 0; 
-    
+    padding: 8px 0;
+
     width: fit-content;
     margin: 0 auto;
-    text-align: center; 
-    
+    text-align: center;
+
     border-bottom: 4px solid var(--origin-green);
 }
 
@@ -414,37 +255,27 @@ a:hover {
     transition: transform 0.1s ease-out;
 }
 
-/* ===== myTrip.html 여행지 카드 ===== */
-.trip-card {
-    background-color: var(--color-card-bg);
-    border: 1px solid var(--color-border-light);
-    border-radius: 8px;
-    padding: 15px;
-    margin: 15px 0;
+/* ===== label / select 공통 스타일 (index.html city-select, signUp.html 여러 select에서 공용) ===== */
+label {
+    color: var(--origin-green);
+    font-size: 1.17rem;
 }
 
-/* ===== myClass.html 시간표 ===== */
-table {
-    border-collapse: collapse;
-    width: 100%;
+select {
+    background-color: transparent;
+    border: 2px solid var(--origin-green);
+    border-radius: 15px;
+    padding: 10px;
+    font: inherit;
+    line-height: normal;
 }
 
-th, td {
-    border: 1px solid var(--color-border);
-    padding: 8px 10px;
-    text-align: center;
+select:focus {
+    border-color: var(--origin-deepgreen);
+    color: var(--origin-deepgreen);
+    outline: none;
 }
 
-thead th {
-    background-color: var(--origin-green);
-    color: var(--font-bright);
-}
-
-tbody tr:nth-child(even) {
-    background-color: var(--color-bg-soft);
-}
-
-/* ===== 미션3: index.html 바로가기 Flexbox ===== */
 /* ===== 스크롤 시 사라짐/sticky 네비바 ===== */
 nav {
     position: fixed;
@@ -549,8 +380,6 @@ nav.nav-hidden {
     background-color: #000000;
 }
 
-/* ===== 미션3: index.html main/aside 가로 배치 ===== */
-
 .layout {
     display: flex;
     gap: 30px;
@@ -573,17 +402,6 @@ Header {
 
 .layout aside {
     flex: 1;
-}
-
-/* ===== 미션3: myTrip.html 여행지 카드 Grid 3열 ===== */
-.trip-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.trip-grid .trip-card {
-    margin: 0;
 }
 
 /* ===== 미션5: 내비게이션 링크 hover 전환 ===== */
@@ -619,25 +437,9 @@ button {
     font: inherit;
     cursor: pointer;
     overflow: hidden;
-    
+
     /* [수정] 부모 버튼은 위치와 크기, 색상만 부드럽게 변경 */
     transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-/* ===== signUp.html: 가입하기/초기화 버튼을 가운데 인라인으로, 크기 확대 ===== */
-form button {
-    display: inline-block;
-    margin: 8px 10px;
-    padding: 14px 32px;
-    font-size: 1.2rem;
-}
-
-button[type="reset"] {
-    background-color: var(--color-neutral-hover);
-}
-
-button[type="reset"]:hover {
-    background-color: var(--color-neutral);
 }
 
 /* 배경 이미지 전용 가상 요소 추가 */
@@ -646,17 +448,17 @@ button::before {
     position: absolute;
     inset: 0;
     z-index: 1;
-    
+
     background-image: url("../media/Imgs/Bg_UnderGround.png");
     /* [기본 상태] 배경 이미지 사이즈 400px */
     background-size: 400px 400px;
     background-repeat: repeat;
-    
+
     background-position: center center;
 
-    opacity: 0.5; 
+    opacity: 0.5;
     pointer-events: none;
-    
+
     /* [추가] 배경 이미지 사이즈가 변할 때도 0.3초 동안 부드럽게 연출 */
     transition: background-size 0.3s ease;
 }
@@ -677,108 +479,6 @@ button:hover::before,
 button:active::before {
     /* [호버 상태] 배경 이미지 사이즈를 500px로 확대 */
     background-size: 500px 500px;
-}
-
-/* ===== myClass.html: 달력 제목 + 이전/다음 달 버튼 ===== */
-.calendar-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    margin: 16px 0;
-}
-
-.calendar-btn-group {
-    display: flex;
-    gap: 20px;
-}
-
-.calendar-btn {
-    display: inline-block;
-    background: none;
-    border: none;
-    padding: 4px 10px;
-    margin: 0;
-    color: var(--origin-green);
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-.calendar-btn::before {
-    display: none;
-}
-
-.calendar-btn:hover,
-.calendar-btn:active {
-    background: none;
-    color: var(--origin-deepgreen);
-    transform: none;
-}
-
-.calendar-btn:disabled {
-    color: var(--color-neutral);
-    cursor: not-allowed;
-}
-
-/* ===== myClass.html: 달력 셀 (날짜는 좌측 상단, 과목명은 중앙) ===== */
-#calendar-table {
-    table-layout: fixed;
-}
-
-#calendar-table th,
-#calendar-table td {
-    width: 14.2857%;
-}
-
-#calendar-table td {
-    position: relative;
-    height: 70px;
-    padding: 20px 4px 4px 4px;
-    box-sizing: border-box;
-    text-align: center;
-    vertical-align: middle;
-}
-
-.calendar-date {
-    position: absolute;
-    top: 4px;
-    left: 6px;
-    color: var(--origin-green);
-    font-size: 0.85rem;
-    font-weight: bold;
-}
-
-.calendar-subject {
-    font-size: 0.8rem;
-}
-
-/* ===== 미션9: 실시간 날씨 ===== */
-#city-select {
-    margin-top: 6px;
-    padding: 4px 8px;
-}
-
-/* .extra-section *가 글자색을 흰색으로 강제해서, 드롭다운을 펼쳤을 때 옵션 목록이
-   흰 배경 위에 흰 글씨로 안 보이는 문제를 막기 위해 옵션 색만 되돌림 */
-#city-select option {
-    color: var(--font-dark);
-}
-
-#weather-box {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: transparent;
-    color: var(--font-bright);
-}
-
-/* ===== 미션5: 여행 카드 hover 효과 ===== */
-.trip-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.trip-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 20px var(--color-shadow);
 }
 
 /* ===== 미션5: 헤더 타이틀 페이드인 ===== */
@@ -925,9 +625,5 @@ button:active::before {
 @media (max-width: 786px) {
     .layout {
         flex-direction: column;
-    }
-
-    .trip-grid {
-        grid-template-columns: 1fr;
     }
 }
