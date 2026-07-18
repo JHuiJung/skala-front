@@ -79,30 +79,74 @@
     <div class="main-content">
         <header>
             <h1 class="fade-in">정희중 포트폴리오</h1>
+            <p>🎂 2000.08.05</p>
             <p>📧 wjdgmlwnd12@gmail.com</p>
         </header>
 
         <main>
-            <h2>오늘의 주요 소식</h2>
+            <h2>🦖 주요 정보</h2>
 
-            <section>
-                <h3>최근 업데이트</h3>
-                <article>
-                    <h4>포털 페이지를 새로 오픈했습니다</h4>
-                    <p>프로필, 시간표, 휴일 계획, 여행 앨범을 이제 이 사이트 하나에서 확인할 수 있습니다.</p>
-                    <p>작성일: <time datetime="2026-07-15">2026년 7월 15일</time></p>
-                </article>
-            </section>
+            <br>
+            
+            <div class="text-card-row">
+                <fieldset class="text-card">
+                    <h2>🎓 학적</h2>
+                    <p><strong>2019.02 ~ 2025.08</strong></p>
+                    <p>전남대학교</p>
+                    <p>컴퓨터정보통신공학과 졸업</p>
+                </fieldset>
 
-            <section>
-                <h3>이번 주 하이라이트</h3>
-                <p>여행 앨범에 새로운 사진과 영상을 추가할 예정이니 기대해주세요.</p>
-            </section>
+                <fieldset class="text-card">
+                    <h2>🚀 활동</h2>
+                    <p><strong>2024.09 ~ 2025.09</strong></p>
+                    <p>Google Develop Group<br> On CNU</p>
+                    <p>Dev &amp; Game 파트<br> Core Member</p>
+                </fieldset>
+
+                <fieldset class="text-card">
+                    <h2>💼 경력</h2>
+                    <p><strong>2023.06 ~ 2023.08</strong></p>
+                    <p>(주)위치스</p>
+                    <p>콘텐츠개발부 인턴</p>
+                </fieldset>
+            </div>
         </main>
     </div>
 
     <div class="footer-divider"></div>
     </div>
+
+    <!-- 동영상 출력 div 시작 -->
+     <br>
+    <div class="youtube-section">
+        <header>
+            <h1 class="fade-in">📺 프로젝트</h1>
+        </header>
+
+
+        <h2 id="video-title"></h2>
+        <div class="youtube-video">
+            <button type="button" id="video-prev" class="video-nav-btn">◀</button>
+            <div class="video-frame">
+                <iframe id="youtube-player" src="" title="YouTube 영상" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <button type="button" id="video-next" class="video-nav-btn">▶</button>
+        </div>
+    </div>
+    <br>
+    <!-- 동영상 출력 div 끝 -->
+
+    
+    <div class="header-divider"></div>
+
+    <div class="main-content">
+        <header>
+            <h1 class="fade-in">🎬 오늘의 영화추천 </h1>
+            <p>오늘의 영화는 무엇일까용?</p>
+        </header>
+    </div>
+
+    <div class="footer-divider"></div>
 
     <section class="extra-section">
         <br>
@@ -161,5 +205,6 @@
     <script src="../script/grade.js"></script>
     <script src="../script/bag.js"></script>
     <script type="module" src="../script/realtimeInfo.js"></script>
+    <script src="../script/youtubeGallery.js"></script>
 </body>
 </html>

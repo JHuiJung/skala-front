@@ -1,3 +1,49 @@
+/* ===== index.html: 유튜브 영상 갤러리 (좌측 버튼 - 영상 - 우측 버튼) ===== */
+.youtube-video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px auto;
+}
+
+.video-nav-btn {
+    background: none;
+    border: none;
+    padding: 4px 10px;
+    margin: 0;
+    color: var(--origin-green);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.video-nav-btn::before {
+    display: none;
+}
+
+.video-nav-btn:hover,
+.video-nav-btn:active {
+    background: none;
+    color: var(--origin-deepgreen);
+    transform: none;
+}
+
+.video-frame {
+    position: relative;
+    width: 560px;
+    max-width: 70vw;
+    aspect-ratio: 16 / 9;
+}
+
+.video-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+}
+
 /* ===== index.html: 자투리 부분 (원래 aside에 있던 내용, 임시로 가로 배치) ===== */
 .extra-section {
     display: flex;
